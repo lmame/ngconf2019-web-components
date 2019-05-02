@@ -27,7 +27,12 @@ export class DashboardPageComponent {
     ];
 
     // TODO: Add custom element to page
-
+    const dashboardTileElement = document.createElement('dashboard-tile');
+    dashboardTileElement['a'] = data[0];
+    dashboardTileElement['b'] = data[1];
+    dashboardTileElement['c'] = data[2];
+    const parentElement = document.getElementById('content');
+    parentElement.appendChild(dashboardTileElement);
   }
 
   addLazy(): void {
